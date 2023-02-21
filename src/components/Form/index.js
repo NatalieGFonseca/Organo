@@ -5,16 +5,6 @@ import "./Form.css";
 import { useState } from 'react'
 
 const Form = (props) => {
-  const times = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'DevOps',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
-  ];
-
   const [nome, setNome] = useState('');
   const [cargo, setCargo] = useState('');
   const [imagem, setImagem] = useState('');
@@ -41,7 +31,7 @@ const Form = (props) => {
           placeholder="Informe o endereço da imagem"
           aoAlterar={valor => setImagem(valor)}
         ></TextField>
-        <ListDrop obrigatorio={true}  label="Time" itens= {times} valor={time} aoAlterar={ valor =>  setTime(valor)} ></ListDrop>
+        <ListDrop obrigatorio={true}  label="Time" itens= {props.times} valor={time} aoAlterar={ valor =>  setTime(valor)} ></ListDrop>
         <Button>Criar card</Button>
       </form>
     </section>

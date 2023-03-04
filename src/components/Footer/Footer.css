@@ -1,0 +1,29 @@
+.footer {
+  background: #6278f7;
+  background-image: url("../../imagens/fundo.png");
+  padding: 60px;
+}
+
+.footer section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.social_media img {
+  justify-content: space-around;
+  padding: 0px 20px 0px 20px;
+}
+
+.description h4 {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #ffffff;
+}

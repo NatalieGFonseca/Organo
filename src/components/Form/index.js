@@ -17,6 +17,10 @@ const Form = (props) => {
     props.salvaColaborador({
       nome, cargo, imagem, time
     })
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   }
 
   return (

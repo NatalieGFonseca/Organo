@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Form from './components/Form';
 import Team from './components/Team';
 
@@ -53,9 +54,13 @@ function App() {
     <div className="App">
       <Banner></Banner>
       <Form salvaColaborador={ colaborador => salvaColaborador(colaborador) } times={ times.map( time => time.title ) } ></Form>
-      {times.map( time => <Team key={time.title} title={time.title} 
-      fundo={time.fundo} destaque={time.destaque} /> ) }
-      
+      {times.map( time => <Team 
+      key={time.title} 
+      title={time.title} 
+      fundo={time.fundo} 
+      destaque={time.destaque}
+      colaboradores={colaboradores.filter( colaborador => colaborador.time === time.title)}  /> ) }
+      <Footer></Footer>
     </div>
   );
 }
